@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1442cd9-1fd5-40ed-a5b9-03ac001548e3" name="Default Changelist" comment="기본 문법">
-      <change afterPath="$PROJECT_DIR$/basic/ex04_slice2/slice.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/linkedList.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/linkedList_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/radix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/radix_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/recursion_AddLetter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/recursion_AddLetter_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/recursion_Fibonacci.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/recursion_Fibonacci_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/recursion_Indirect.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/recursion_Indirect_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/reverse.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_algorism/reverse_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex01_type/type.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/01_type/type.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex02_array/array.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/02_array/array.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex03_slice1/slice.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/03_slice1/slice.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex04_slice2/slice.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/04_slice2/slice.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex05_struct1/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/05_struct1/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex06_struct2/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/06_struct2/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex07_map/map.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/07_map/map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex08_for/for.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/08_for/for.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex09_switch/switch.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/09_switch/switch.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex10_func1/func.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/10_func1/func.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex11_func2/func.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/11_func2/func.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex12_closure/closure.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/12_closure/closure.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex13_defer/defer.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/13_defer/defer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex14_interface/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/14_interface/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex15_blank_interface/blank_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/15_blank_interface/blank_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex16_go1/go.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/16_go1/go.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex17_go2/go.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/17_go2/go.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/ex18_go3/go.go" beforeDir="false" afterPath="$PROJECT_DIR$/01_basic/18_go3/go.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,49 +74,67 @@
       <recent name="$PROJECT_DIR$/basic" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build slice.go">
-    <configuration name="go build basic/basic/ex02_array" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="basic" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/basic/ex02_array/array.go" />
-      <package value="basic/basic/ex02_array" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build basic/ex0_type" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="basic" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/ex0_type/type.go" />
-      <package value="basic/ex0_type" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build ex1_type.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestNode_AddNode in basic/02_algorism">
+    <configuration name="go build linkedList.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="basic" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/ex1_type.go" />
+      <filePath value="$PROJECT_DIR$/02_algorism/linkedList.go" />
       <package value="basic" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build slice.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFibonacci in basic/02_algorism" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="basic" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/basic/ex04_slice2/slice.go" />
-      <package value="basic" />
+      <working_directory value="$PROJECT_DIR$/02_algorism" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="basic/02_algorism" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestFibonacci\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestIndirect in basic/02_algorism" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="basic" />
+      <working_directory value="$PROJECT_DIR$/02_algorism" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="basic/02_algorism" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestIndirect\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestNode_AddNode in basic/02_algorism" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="basic" />
+      <working_directory value="$PROJECT_DIR$/02_algorism" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="basic/02_algorism" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNode_AddNode\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRadix in basic/02_algorism" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="basic" />
+      <working_directory value="$PROJECT_DIR$/02_algorism" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="basic/02_algorism" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestRadix\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build slice.go" />
-        <item itemvalue="Go Build.go build basic/basic/ex02_array" />
-        <item itemvalue="Go Build.go build basic/ex0_type" />
-        <item itemvalue="Go Build.go build ex1_type.go" />
+        <item itemvalue="Go Test.TestNode_AddNode in basic/02_algorism" />
+        <item itemvalue="Go Build.go build linkedList.go" />
+        <item itemvalue="Go Test.TestRadix in basic/02_algorism" />
+        <item itemvalue="Go Test.TestIndirect in basic/02_algorism" />
+        <item itemvalue="Go Test.TestFibonacci in basic/02_algorism" />
       </list>
     </recent_temporary>
   </component>
@@ -108,26 +155,30 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="627" y="177" key="Github.UntrackedFilesDialog/0.0.1440.900@0.0.1440.900" timestamp="1607179555863" />
-    <state width="1398" height="236" key="GridCell.Tab.0.bottom" timestamp="1607221831940">
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom" timestamp="1607240309124">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607221831940" />
-    <state width="1398" height="236" key="GridCell.Tab.0.center" timestamp="1607221831937">
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607240309124" />
+    <state width="1398" height="236" key="GridCell.Tab.0.center" timestamp="1607240309123">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="236" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607221831937" />
-    <state width="1398" height="236" key="GridCell.Tab.0.left" timestamp="1607221831936">
+    <state width="1398" height="236" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607240309123" />
+    <state width="1398" height="236" key="GridCell.Tab.0.left" timestamp="1607240309122">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="236" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607221831936" />
-    <state width="1398" height="236" key="GridCell.Tab.0.right" timestamp="1607221831939">
+    <state width="1398" height="236" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607240309122" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right" timestamp="1607240309123">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="236" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607221831939" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1607221378973">
+    <state width="1398" height="236" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607240309123" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1607221951290">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607221378973" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607221951290" />
+    <state x="427" y="197" width="586" height="534" key="find.popup" timestamp="1607239257620">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="427" y="197" width="586" height="534" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1607239257620" />
     <state x="385" y="217" width="670" height="676" key="search.everywhere.popup" timestamp="1607221669820">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
