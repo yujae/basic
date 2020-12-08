@@ -25,8 +25,25 @@ func AddNode(tail *Node, value int) *Node {
 	return tail.next
 }
 
-func RemoveNode(prev *Node) {
-	prev.next = prev.next.next
+func RemoveNode(node *Node, root *Node, tail *Node) (*Node, *Node) {
+	if node == root {
+		root = node.next
+		node.next = nil
+		return root, tail
+	}
+
+	prev := node
+	for prev != nil {
+		prev = prev.next
+	}
+
+	if node == tail {
+		prev.next = nil
+		tail = prev
+	} else {
+		node.next = node.next.next
+	}
+	return root, tail
 }
 
 func PrintNodes(root *Node) {

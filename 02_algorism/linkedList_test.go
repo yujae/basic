@@ -29,12 +29,12 @@ func TestRemoveNode(t *testing.T) {
 		tail = AddNode(tail, i)
 	}
 	PrintNodes(root)
-	RemoveNode(root.next.next)
+	root, tail = RemoveNode(root.next.next, root, tail)
 	PrintNodes(root)
 
 	fmt.Println("---------------------")
 
-	RemoveNode(root)
-	RemoveNode(root)
+	root, tail = RemoveNode(root, root, tail)
+	root, tail = RemoveNode(root, root, tail)
 	PrintNodes(root)
 }
