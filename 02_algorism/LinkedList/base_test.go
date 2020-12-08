@@ -1,4 +1,4 @@
-package algorism
+package LinkedList
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func TestAddNode(t *testing.T) {
-	root := NewRoot()
+	root := &Node{value: 0}
 	tail := FindTail(root)
 	for tail.next != nil {
 		tail = tail.next
@@ -19,7 +19,7 @@ func TestAddNode(t *testing.T) {
 }
 
 func TestRemoveNode(t *testing.T) {
-	root := NewRoot()
+	root := &Node{value: 0}
 	tail := FindTail(root)
 	for tail.next != nil {
 		tail = tail.next

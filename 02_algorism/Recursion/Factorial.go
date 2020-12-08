@@ -1,4 +1,4 @@
-package algorism
+package Recursion
 
 func Fact(n int) int {
 	if n == 0 {

@@ -1,15 +1,10 @@
-package algorism
+package LinkedList
 
 import "fmt"
 
 type Node struct {
 	next  *Node
 	value int
-}
-
-func NewRoot() *Node {
-	root := &Node{value: 0}
-	return root
 }
 
 func FindTail(root *Node) *Node {

@@ -1,4 +1,4 @@
-package algorism
+package Recursion
 
 func Fibonacci(n int) int {
 	if n == 0 || n == 1 {
