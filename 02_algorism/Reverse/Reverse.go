@@ -1,4 +1,4 @@
-package algorism
+package Reverse
 
 import "fmt"
 
