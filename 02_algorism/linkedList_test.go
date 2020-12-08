@@ -32,7 +32,7 @@ func TestRemoveNode(t *testing.T) {
 	root, tail = RemoveNode(root.next.next, root, tail)
 	PrintNodes(root)
 
-	fmt.Println("----------------------")
+	fmt.Println("-----------------------")
 
 	root, tail = RemoveNode(root, root, tail)
 	root, tail = RemoveNode(root, root, tail)
