@@ -1,6 +1,4 @@
-package DoubleLinkedList
-
-import "fmt"
+package Stack
 
 type BothSideNode struct {
 	prev  *BothSideNode
@@ -13,7 +11,7 @@ type DoubleLinkedList struct {
 	tail *BothSideNode
 }
 
-func (list *DoubleLinkedList) AddNode(value int) {
+func (list *DoubleLinkedList) Push(value int) {
 	if list.root == nil {
 		list.root = &BothSideNode{value: value}
 		list.tail = list.root
@@ -23,6 +21,12 @@ func (list *DoubleLinkedList) AddNode(value int) {
 	list.tail.next = &BothSideNode{value: value}
 	list.tail.next.prev = list.tail
 	list.tail = list.tail.next
+}
+
+func (list *DoubleLinkedList) Pop() int {
+	last := list.tail.value
+	list.RemoveNode(list.tail)
+	return last
 }
 
 func (list *DoubleLinkedList) RemoveNode(node *BothSideNode) {
@@ -42,20 +46,4 @@ func (list *DoubleLinkedList) RemoveNode(node *BothSideNode) {
 	node.prev.next = node.next
 	node.next.prev = node.prev
 	node = nil
-}
-
-func (list *DoubleLinkedList) PrintNodes() {
-	node := list.root
-	for node.next != nil {
-		fmt.Printf("%d -> ", node.value)
-		node = node.next
-	}
-	fmt.Printf("%d\n", node.value)
-
-	node = list.tail
-	for node.prev != nil {
-		fmt.Printf("%d -> ", node.value)
-		node = node.prev
-	}
-	fmt.Printf("%d\n", node.value)
 }
