@@ -12,8 +12,6 @@ func (l *LinkedList) AddNode(value int) {
 		l.root = &Node{value: value}
 		l.tail = l.root
 		return
-	} else {
-
 	}
 
 	l.tail.next = &Node{value: value}
