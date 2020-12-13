@@ -17,6 +17,6 @@ func Push(s *[]int, val int) {
 
 func Pop(s *[]int) int {
 	var first int
-	first, *s = (*s)[0], (*s)[1:]
+	first, *s = (*s)[len(*s)-1], (*s)[:len(*s)-1]
 	return first
 }

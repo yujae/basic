@@ -2,23 +2,28 @@ package LinkedList
 
 import "fmt"
 
+type OneSideNode struct {
+	next  *OneSideNode
+	value int
+}
+
 type LinkedList struct {
-	root *Node
-	tail *Node
+	root *OneSideNode
+	tail *OneSideNode
 }
 
 func (list *LinkedList) AddNode(value int) {
 	if list.root == nil {
-		list.root = &Node{value: value}
+		list.root = &OneSideNode{value: value}
 		list.tail = list.root
 		return
 	}
 
-	list.tail.next = &Node{value: value}
+	list.tail.next = &OneSideNode{value: value}
 	list.tail = list.tail.next
 }
 
-func (list *LinkedList) RemoveNode(node *Node) {
+func (list *LinkedList) RemoveNode(node *OneSideNode) {
 	if node == list.root {
 		list.root = node.next
 		node.next = nil
