@@ -31,7 +31,11 @@ func (node *TreeNode) StackDFS() {
 		var top *TreeNode
 		top, stack = stack[len(stack)-1], stack[:len(stack)-1] // pop
 		fmt.Println(top.val)
-		for i := 0; i < len(top.children); i++ {
+		//for i := 0; i < len(top.children); i++ {
+		//	stack = append(stack, top.children[i]) // push
+		//}
+		// 순서를 반대로 하고 싶으면
+		for i := len(top.children) - 1; i >= 0; i-- {
 			stack = append(stack, top.children[i]) // push
 		}
 	}
