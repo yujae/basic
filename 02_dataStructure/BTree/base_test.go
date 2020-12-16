@@ -2,6 +2,14 @@ package BTree
 
 import "testing"
 
+/*
+		0
+      /   \
+     1     2
+    / \   / \
+   3   4 5   6
+*/
+
 func TestAddNode(t *testing.T) {
 	root := &TreeNode{val: 0}
 	root.AddNode(1, "left")

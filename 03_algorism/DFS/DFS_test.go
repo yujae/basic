@@ -2,6 +2,17 @@ package DFS
 
 import "testing"
 
+/*
+       1
+    /  |  \
+   2   3   4
+  /\   /\  / \
+ 5  6 7  8 9  10
+
+깊이우선탐색
+결과 : 1 2 5 6 3 7 8 4 9 10
+*/
+
 func TestDFS(t *testing.T) {
 	num := 1
 	root := &TreeNode{val: num}
