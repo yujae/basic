@@ -6,7 +6,7 @@ import (
 )
 
 func TestHeap(t *testing.T) {
-	s := &Heap{}
+	s := &MaxHeap{}
 	s.Push(3)
 	s.Push(4)
 	s.Push(8)
