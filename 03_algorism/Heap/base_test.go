@@ -2,22 +2,87 @@ package Heap
 
 import (
 	"fmt"
+	"math/rand"
 	"testing"
 )
 
-func TestHeap(t *testing.T) {
+func TestMaxHeap(t *testing.T) {
 	s := &MaxHeap{}
-	s.Push(3)
-	s.Push(4)
-	s.Push(8)
-	s.Push(7)
-	s.Push(9)
-	s.Push(6)
-	s.Push(7)
-
-	fmt.Println(s)
+	for i := 0; i < 100; i++ {
+		s.Push(rand.Intn(100))
+	}
 
 	for i := 0; i < 100; i++ {
-		s.Pop()
+		val, err := s.Pop()
+		if err != nil {
+			break
+		}
+		fmt.Printf("%d ", val)
+	}
+}
+
+func TestMinHeap(t *testing.T) {
+	s := &MinHeap{}
+	for i := 0; i < 100; i++ {
+		s.Push(rand.Intn(100))
+	}
+
+	for i := 0; i < 100; i++ {
+		val, err := s.Pop()
+		if err != nil {
+			break
+		}
+		fmt.Printf("%d ", val)
+	}
+}
+
+func TestNth(t *testing.T) {
+	nums := []int{-3, -1, 0, 44, 3, 2, 4, 5, 10}
+	Nth := 5
+	s := &MinHeap{}
+
+	for _, v := range nums {
+		s.Push(v)
+		if len(s.list) > Nth {
+			_, _ = s.Pop()
+		}
+	}
+	fmt.Println(s.list[0])
+}
+
+func TestNth2(t *testing.T) {
+	nums := []int{}
+	Nth := 5
+	s := &MinHeap{}
+
+	for i := 1; i <= 100000000; i++ {
+		nums = append(nums, i)
+	}
+
+	for _, v := range nums {
+		s.Push(v)
+		if len(s.list) > Nth {
+			_, _ = s.Pop()
+		}
+	}
+	fmt.Println(s.list[0])
+}
+
+func TestNth3(t *testing.T) {
+	nums := []int{}
+	Nth := 5
+	s := &MaxHeap{}
+
+	for i := 1; i <= 100000000; i++ {
+		nums = append(nums, i)
+	}
+
+	for _, v := range nums {
+		s.Push(v)
+	}
+
+	for i := 0; i < Nth; i++ {
+		val, _ := s.Pop()
+		fmt.Println(val)
 	}
 }

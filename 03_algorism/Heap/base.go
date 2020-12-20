@@ -1,6 +1,8 @@
 package Heap
 
-import "fmt"
+import (
+	"errors"
+)
 
 /*
 	1. 사용처
@@ -48,6 +50,10 @@ type MaxHeap struct {
 	list []int
 }
 
+type MinHeap struct {
+	list []int
+}
+
 func (h *MaxHeap) Push(val int) {
 	h.list = append(h.list, val)
 
@@ -64,9 +70,9 @@ func (h *MaxHeap) Push(val int) {
 	}
 }
 
-func (h *MaxHeap) Pop() {
+func (h *MaxHeap) Pop() (int, error) {
 	if len(h.list) == 0 {
-		return
+		return 0, errors.New("no more")
 	}
 
 	idx := 0
@@ -81,25 +87,89 @@ func (h *MaxHeap) Pop() {
 		leftChildIdx := 2*idx + 1
 		rightChildIdx := 2*idx + 2
 
-		if leftChildIdx > maxIdx || rightChildIdx > maxIdx {
+		if leftChildIdx > maxIdx {
 			break
 		}
-
-		if maxIdx < rightChildIdx && h.list[0] < h.list[leftChildIdx] {
+		// Left 자식만 있는 상태
+		if maxIdx < rightChildIdx && h.list[idx] <= h.list[leftChildIdx] {
 			h.list[idx], h.list[leftChildIdx] = h.list[leftChildIdx], h.list[idx]
 			idx = leftChildIdx
 			break
 		}
-		if h.list[leftChildIdx] < h.list[rightChildIdx] && h.list[idx] < h.list[rightChildIdx] {
+
+		if rightChildIdx > maxIdx {
+			break
+		}
+		if h.list[leftChildIdx] <= h.list[rightChildIdx] && h.list[idx] <= h.list[rightChildIdx] {
 			h.list[idx], h.list[rightChildIdx] = h.list[rightChildIdx], h.list[idx]
 			idx = rightChildIdx
-		} else if h.list[0] < h.list[leftChildIdx] {
+		} else if h.list[idx] <= h.list[leftChildIdx] && h.list[rightChildIdx] <= h.list[leftChildIdx] {
 			h.list[idx], h.list[leftChildIdx] = h.list[leftChildIdx], h.list[idx]
 			idx = leftChildIdx
+		} else {
+			break
 		}
-
-		maxIdx = len(h.list) - 1
 	}
 
-	fmt.Printf("%d ", first)
+	return first, nil
+}
+
+func (h *MinHeap) Push(val int) {
+	h.list = append(h.list, val)
+
+	idx := len(h.list) - 1
+	for idx > 0 {
+		parentIdx := (idx - 1) / 2
+		parent := h.list[parentIdx]
+
+		if parent > val {
+			h.list[parentIdx], h.list[idx] = h.list[idx], h.list[parentIdx]
+		}
+
+		idx = (idx - 1) / 2
+	}
+}
+
+func (h *MinHeap) Pop() (int, error) {
+	if len(h.list) == 0 {
+		return 0, errors.New("no more")
+	}
+
+	idx := 0
+	first := h.list[idx]
+	last := h.list[len(h.list)-1]
+
+	h.list[0] = last
+	h.list = h.list[:len(h.list)-1]
+	maxIdx := len(h.list) - 1
+
+	for idx < maxIdx {
+		leftChildIdx := 2*idx + 1
+		rightChildIdx := 2*idx + 2
+
+		if leftChildIdx > maxIdx {
+			break
+		}
+		// Left 자식만 있는 상태
+		if maxIdx < rightChildIdx && h.list[idx] >= h.list[leftChildIdx] {
+			h.list[idx], h.list[leftChildIdx] = h.list[leftChildIdx], h.list[idx]
+			break
+		}
+
+		if rightChildIdx > maxIdx {
+			break
+		}
+		// Left, Right 자식 둘다 있는 상태
+		if h.list[leftChildIdx] >= h.list[rightChildIdx] && h.list[idx] >= h.list[rightChildIdx] {
+			h.list[idx], h.list[rightChildIdx] = h.list[rightChildIdx], h.list[idx]
+			idx = rightChildIdx
+		} else if h.list[leftChildIdx] <= h.list[rightChildIdx] && h.list[leftChildIdx] <= h.list[idx] {
+			h.list[idx], h.list[leftChildIdx] = h.list[leftChildIdx], h.list[idx]
+			idx = leftChildIdx
+		} else {
+			break
+		}
+	}
+
+	return first, nil
 }
