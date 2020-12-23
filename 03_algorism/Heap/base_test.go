@@ -54,7 +54,7 @@ func TestNth(t *testing.T) {
 }
 
 func TestNth2(t *testing.T) {
-	nums := []int{}
+	var nums []int
 	Nth := 5
 	s := &MinHeap{}
 
@@ -75,7 +75,7 @@ func TestNth2(t *testing.T) {
 }
 
 func TestNth3(t *testing.T) {
-	nums := []int{}
+	var nums []int
 	Nth := 5
 	s := &MaxHeap{}
 
