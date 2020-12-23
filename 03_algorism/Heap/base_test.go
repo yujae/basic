@@ -44,7 +44,10 @@ func TestNth(t *testing.T) {
 	for _, v := range nums {
 		s.Push(v)
 		if len(s.list) > Nth {
-			_, _ = s.Pop()
+			_, err := s.Pop()
+			if err != nil {
+				fmt.Println(err)
+			}
 		}
 	}
 	fmt.Println(s.list[0])
@@ -62,7 +65,10 @@ func TestNth2(t *testing.T) {
 	for _, v := range nums {
 		s.Push(v)
 		if len(s.list) > Nth {
-			_, _ = s.Pop()
+			_, err := s.Pop()
+			if err != nil {
+				fmt.Println(err)
+			}
 		}
 	}
 	fmt.Println(s.list[0])
